@@ -1,44 +1,94 @@
 [
-    {
-      "title": "Cardio Kickboxing",
-      "description": "This high-intensity class combines cardio exercises with kickboxing techniques to burn calories, improve cardiovascular fitness, and tone the entire body.",
-      "image": "https://img.freepik.com/free-photo/male-boxer-boxing-punching-bag_155003-3063.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
-      "students": 50,
-      "instructor": {
-        "name": "John Doe",
-        "image": "https://img.freepik.com/free-photo/determined-professional-boxer_1098-14119.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais"
-      }
-    },
-    {
-      "title": "HIIT (High-Intensity Interval Training)",
-      "description": "HIIT workouts involve short bursts of intense exercise followed by brief recovery periods. These classes are known for their calorie-burning efficiency and ability to boost metabolism.",
-      "image": "https://img.freepik.com/premium-photo/bearded-athletic-looking-bodybulder-work-out-with-battle-rope-dark-with-smoke-strength-motivation_136403-10344.jpg?w=996",
-      "students": 65,
-      "instructor": {
-        "name": "Jane Smith",
-        "image": "https://img.freepik.com/free-photo/man-exercising-leg-press-machine_329181-14136.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais"
-      }
-    },
-    {
-      "title": "Zumba",
-      "description": "Zumba is a dance fitness program that incorporates Latin and international music. It offers a fun and energetic workout that helps burn calories, improve coordination, and tone muscles.",
-      "image": "https://img.freepik.com/free-photo/dance-time-stylish-men-woman-dancing-hip-hop-bright-clothes-green-background-dance-hall-neon-light_155003-16406.jpg?w=1380&t=st=1686181162~exp=1686181762~hmac=6f1c151a85b00925bd1a3dc07bc33a9bdc3e3e795667c485a31bc5bb54a8219c",
-      "students": 80,
-      "instructor": {
-        "name": "Sarah Johnson",
-        "image": "https://img.freepik.com/free-photo/female-model-practicing-some-zumba_23-2149047622.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais"
-      }
-    },
-    {
-      "title": "Yoga",
-      "description": "Yoga classes provide a holistic approach to weight loss by combining physical postures, breathing exercises, and meditation. They improve flexibility, strength, and overall well-being.",
-      "image": "https://img.freepik.com/free-photo/young-woman-doing-half-lotus-toe-balance-exercise_1163-5069.jpg?w=996&t=st=1686181975~exp=1686182575~hmac=0d52f20a1449808e3e7769310873c7e4b84c5b575c6bf0ba720c774ec09e2757",
-      "students": 45,
-      "instructor": {
-        "name": "Michael Anderson",
-        "image": "https://img.freepik.com/free-photo/young-beautiful-woman-doing-yoga-exercise-green-park-healthy-lifestyle-fitness-concept_155003-24082.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=sph"
-      }
-    },
+  {
+    "title": "Cardio Kickboxing",
+    "description": "This high-intensity class combines cardio exercises with kickboxing techniques to burn calories, improve cardiovascular fitness, and tone the entire body.",
+    "image": "https://img.freepik.com/free-photo/male-boxer-boxing-punching-bag_155003-3063.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+    "students": 50,
+    "instructor": {
+      "name": "John Doe",
+      "email":"jhonDoe@gmail.com",
+      "image": "https://img.freepik.com/free-photo/determined-professional-boxer_1098-14119.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+      "numberOfClassesTaken": 2,
+      "classesTaken": [
+        {
+          "className":"cardio Kickboxing",
+          "availableSeats":2
+        },
+        {
+          "className":"Boot Camp",
+          "availableSeats":5
+        }
+      ]
+    }
+  },
+   
+  {
+    "title": "HIIT (High-Intensity Interval Training)",
+    "description": "HIIT workouts involve short bursts of intense exercise followed by brief recovery periods. These classes are known for their calorie-burning efficiency and ability to boost metabolism.",
+    "image": "https://img.freepik.com/premium-photo/bearded-athletic-looking-bodybulder-work-out-with-battle-rope-dark-with-smoke-strength-motivation_136403-10344.jpg?w=996",
+    "students": 65,
+    "instructor": {
+      "name": "Jane Smith",
+      "email":"janesmith@gmail.com",
+      "image": "https://img.freepik.com/free-photo/man-exercising-leg-press-machine_329181-14136.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+      "numberOfClassesTaken": 2,
+      "classesTaken": [
+        {
+          "className":"HIIT (High-Intensity Interval Training)",
+          "availableSeats":2
+        },
+        {
+          "className":"Piloxing",
+          "availableSeats":3
+        }
+      ]
+    }
+  },
+  {
+    "title": "Zumba",
+    "description": "Zumba is a dance fitness program that incorporates Latin and international music. It offers a fun and energetic workout that helps burn calories, improve coordination, and tone muscles.",
+    "image": "https://img.freepik.com/free-photo/dance-time-stylish-men-woman-dancing-hip-hop-bright-clothes-green-background-dance-hall-neon-light_155003-16406.jpg?w=1380&t=st=1686181162~exp=1686181762~hmac=6f1c151a85b00925bd1a3dc07bc33a9bdc3e3e795667c485a31bc5bb54a8219c",
+    "students": 80,
+    "instructor": {
+      "name": "Sarah Johnson",
+      "email":"sarahjohnson@gmail.com",
+      "image": "https://img.freepik.com/free-photo/female-model-practicing-some-zumba_23-2149047622.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+      "numberOfClassesTaken": 1,
+      "classesTaken": [
+        {
+          "className":"Zumba",
+          "availableSeats":6
+        }
+      ]
+    }
+  },
+  {
+    "title": "Yoga",
+    "description": "Yoga classes provide a holistic approach to weight loss by combining physical postures, breathing exercises, and meditation. They improve flexibility, strength, and overall well-being.",
+    "image": "https://img.freepik.com/free-photo/young-woman-doing-half-lotus-toe-balance-exercise_1163-5069.jpg?w=996&t=st=1686181975~exp=1686182575~hmac=0d52f20a1449808e3e7769310873c7e4b84c5b575c6bf0ba720c774ec09e2757",
+    "students": 45,
+    "instructor": {
+      "name": "Michael Anderson",
+      "email":"michaelanderson@gmail.com",
+      "image": "https://img.freepik.com/free-photo/young-beautiful-woman-doing-yoga-exercise-green-park-healthy-lifestyle-fitness-concept_155003-24082.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=sph",
+      "numberOfClassesTaken": 3,
+      
+      "classesTaken": [
+        {
+          "className":"Yoga",
+          "availableSeats":4
+        },
+        {
+          "className":"Aerial Yoga",
+          "availableSeats":5
+        },
+        {
+          "className":"Piloxing",
+          "availableSeats":3
+        }
+      ]
+    }
+  },
     {
       "title": "Spinning/Cycling",
       "description": "Indoor cycling classes are an excellent way to burn calories and improve cardiovascular endurance. They simulate outdoor cycling experiences and are suitable for all fitness levels.",
@@ -46,9 +96,22 @@
       "students": 70,
       "instructor": {
         "name": "Robert Wilson",
-        "image": "https://img.freepik.com/free-photo/professional-his-biggest-passion_329181-8694.jpg?w=996&t=st=1686194854~exp=1686195454~hmac=670e0144ceca2672f26757c76c048ca4d227b92734cf5d6c5c8086b4a1a25003"
+        "email":"robertwilson@gmail.com",
+        "image": "https://img.freepik.com/free-photo/professional-his-biggest-passion_329181-8694.jpg?w=996&t=st=1686194854~exp=1686195454~hmac=670e0144ceca2672f26757c76c048ca4d227b92734cf5d6c5c8086b4a1a25003",
+        "numberOfClassesTaken": 2,
+        "classesTaken": [
+          {
+            "className":"Spinning/Cycling",
+            "availableSeats":9
+          },
+          {
+            "className":"Aqua Fitness",
+            "availableSeats":3
+          }
+        ]
       }
     },
+
     {
       "title": "Boot Camp",
       "description": "Boot camp classes combine strength training exercises with cardiovascular drills. They typically include a mix of bodyweight exercises, resistance training, and interval training, aiming to burn fat and build muscle.",
@@ -56,7 +119,119 @@
       "students": 55,
       "instructor": {
         "name": "Emily Thompson",
-        "image": "https://img.freepik.com/free-photo/close-up-park-ranger-woods_23-2149309550.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais"
+        "email":"emilythompson@gmail.com",
+        "image": "https://img.freepik.com/free-photo/close-up-park-ranger-woods_23-2149309550.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+        "numberOfClassesTaken": 1,
+        "classesTaken": [
+          {
+            "className":"Boot Camp",
+            "availableSeats":5
+          }
+        ]
+      }
+    },
+    {
+      "title": "Aerial Yoga",
+      "description": "Aerial yoga combines traditional yoga poses with aerial arts. Using hammocks or silks, it helps improve strength, flexibility, balance, and body awareness.",
+      "image": "https://img.freepik.com/free-photo/antigravity-yoga_144627-29442.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+      "students": 25,
+      "instructor": {
+        "name": "Natalie Davis",
+        "email":"nataliedavis@gmail.com",
+        "image": "https://img.freepik.com/free-photo/woman-aerial-silks-class_23-2147778531.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+        "numberOfClassesTaken": 2,
+        "classesTaken": [
+          {
+            "className":"Aerial Yoga",
+            "availableSeats":5
+          },
+          {
+            "className":"Yoga",
+            "availableSeats":4
+          }
+        ]
+      }
+    },
+    {
+      "title": "Piloxing",
+      "description": "Piloxing is a fusion of Pilates, boxing, and dance. It combines high-energy movements with muscle toning exercises to improve strength, flexibility, and cardiovascular endurance.",
+      "image": "https://img.freepik.com/free-photo/yoga-group-classes-inside-gym_1303-14779.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=sph",
+      "students": 20,
+      "instructor": {
+        "name": "Mark Thompson",
+        "email":"markthompson@gmail.com",
+        "image": "https://img.freepik.com/free-photo/handsome-man-training-summer-park_1157-25625.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+        "numberOfClassesTaken": 1,
+        "classesTaken": [
+          {
+            "className":"Piloxing",
+            "availableSeats":3
+          }
+        ]
+      }
+    },
+    {
+      "title": "Aqua Fitness",
+      "description": "Aqua fitness classes are performed in water and provide a low-impact workout. They improve cardiovascular endurance, strength, and flexibility while reducing stress on joints.",
+      "image": "https://img.freepik.com/free-photo/fitness-group-girls-doing-aerobical-excercises-swimming-pool-aqua-park-sport-leisure-activities_627829-10851.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+      "students": 30,
+      "instructor": {
+        "name": "Jessica Garcia",
+        "email":"jessicagarcia@gmail.com",
+        "image": "https://img.freepik.com/free-photo/women-swimming-swimming-pool_1098-21381.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+      "numberOfClassesTaken": 2,
+      "classesTaken": [
+        {
+          "className":"Aqua Fitness",
+          "availableSeats":3
+        },
+        {
+          "className":"Spinning/Cycling",
+          "availableSeats":9
+        }
+      ]
+      }
+    },
+    {
+      "title": "Circuit Training",
+      "description": "Circuit training involves performing a series of exercises targeting different muscle groups with minimal rest in between. It improves strength, endurance, and overall fitness.",
+      "image": "https://img.freepik.com/free-photo/people-working-out-indoors-together-with-dumbbells_23-2149175338.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+      "students": 40,
+      "instructor": {
+        "name": "Ryan Wilson",
+        "email":"ryanwilson@gmail.com",
+        "image": "https://img.freepik.com/free-photo/sportsman-doing-push-ups-exercises-working-out-front-stadium_8353-6407.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+        "numberOfClassesTaken": 1,
+      "classesTaken": [
+        {
+          "className":"Circuit Training",
+          "availableSeats":3
+        }
+      ]
+      }
+    },
+   
+   
+    {
+      "title": "Bodyweight Training",
+      "description": "Bodyweight training involves using your own body weight as resistance to build strength, flexibility, and endurance. It can be done anywhere with minimal equipment.",
+      "image": "https://img.freepik.com/free-photo/group-young-people-training-gym-indoors-maintaining-sportive-lifestyle_155003-45875.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+      "students": 30,
+      "instructor": {
+        "name": "Daniel Lee",
+        "email":"daniellee@gmail.com",
+        "image": "https://img.freepik.com/free-photo/young-muscular-athlete-training-gym-doing-strength-exercises-practicing_155003-35979.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+        "numberOfClassesTaken": 2,
+        "classesTaken": [
+          {
+            "className":"Bodyweight Training",
+            "availableSeats":3
+          },
+          {
+            "className":"cardio Kickboxing",
+            "availableSeats":2
+          }
+        ]
       }
     }
   ]

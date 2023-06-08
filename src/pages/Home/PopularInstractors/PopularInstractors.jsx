@@ -11,7 +11,7 @@ const PopularInstructors = () => {
       .then(data => {
         // Sort the instructors by students in descending order
         const sortedInstructors = data.sort((a, b) => b.students - a.students);
-        setInstructors(sortedInstructors);
+        setInstructors(sortedInstructors.slice(0, 6)); // Only keep the top 6 instructors
       })
       .catch(error => console.log(error));
   }, []);
