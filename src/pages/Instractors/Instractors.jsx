@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet-async';
+
 
 const Instructors = () => {
   const [instructors, setInstructors] = useState([]);
@@ -16,7 +18,10 @@ const Instructors = () => {
   }, []);
 
   return (
-    <div>
+      <div className="mb-24">
+        <Helmet>
+            <title>Fitcraft | Instructors</title>
+        </Helmet>
       <h2 className="text-2xl font-bold text-center">
         All the Instructors of our School
       </h2>
@@ -35,7 +40,7 @@ const Instructors = () => {
               <th>Image</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Number Of Classes</th>
+              <th>Number Of Classes Taken</th>
               <th>Name of classes</th>
             </tr>
           </thead>
