@@ -1,0 +1,77 @@
+.carousel-container {
+    position: relative;
+    width: 500px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.5; */
+    transition: opacity 0.5s ease;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  .instructor {
+    text-align: center;
+    margin-top: 4.5rem;
+  }
+  
+  .instructor-image-container {
+    width: 320px; /* Adjust the image container size as needed */
+    height: 320px; /* Adjust the image container size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .instructor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  
+  .instructor-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .instructor-students {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* .popular-classes {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .popular-classes hr {
+    border: none;
+    height: 2px;
+    background-color: #ff0000;
+  } */
+  
