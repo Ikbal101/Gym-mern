@@ -6,7 +6,7 @@ const Instructors = () => {
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
-    fetch('classes.json')
+    fetch('instructors.json')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -33,9 +33,7 @@ const Instructors = () => {
           <thead>
             <tr>
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
+              Numbers
               </th>
               <th>Image</th>
               <th>Name</th>
@@ -45,28 +43,31 @@ const Instructors = () => {
             </tr>
           </thead>
           <tbody>
-            {instructors.map((instructor, index) => (
-              <tr key={index}>
-                <th>{index + 1}</th>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img src={instructor.instructor.image} alt="Instructor Avatar" />
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>{instructor.instructor.name}</td>
-                <td>{instructor.instructor.email}</td>
-                <td>{instructor.instructor.numberOfClassesTaken}</td>
-                <td>
-                  {instructor.instructor.classesTaken.map((classTaken, classIndex) => (
-                    <div key={classIndex}>{classTaken.className}</div>
-                  ))}
-                </td>
-              </tr>
-            ))}
+          {instructors.map((instructor, index) => (
+  <tr key={index}>
+    <th>{index + 1}</th>
+    <td>
+      <div className="flex items-center space-x-3">
+        <div className="avatar">
+          <div className="mask mask-squircle w-12 h-12">
+            <img src={instructor.image} alt="Instructor Avatar" />
+          </div>
+        </div>
+      </div>
+    </td>
+    <td className="font-bold">{instructor.name}</td>
+    <td>{instructor.email}</td>
+    <td>{instructor.numberOfClassesTaken}</td>
+    <td className="font-bold">
+      <ul>
+        {instructor.classesTaken.map((className, index) => (
+          <li key={index}>{className}</li>
+        ))}
+      </ul>
+    </td>
+  </tr>
+))}
+
           </tbody>
         </table>
       </div>

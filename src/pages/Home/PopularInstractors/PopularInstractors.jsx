@@ -6,7 +6,8 @@ const PopularInstructors = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    fetch('classes.json')
+    // Fetch the instructors.json file
+    fetch('instructors.json')
       .then(response => response.json())
       .then(data => {
         // Sort the instructors by students in descending order
@@ -39,10 +40,10 @@ const PopularInstructors = () => {
             <div key={index} className="carousel-slide">
               <div className="instructor">
                 <div className="instructor-image-container">
-                  <img className="instructor-image" src={instructor.instructor.image} alt={instructor.instructor.name} />
+                  <img className="instructor-image" src={instructor.image} alt={instructor.name} />
                 </div>
                 <div className="font-bold">{instructor.title}</div>
-                <div className="instructor-name">{instructor.instructor.name}</div>
+                <div className="instructor-name">{instructor.name}</div>
                 <div className="instructor-students">Students: {instructor.students}</div>
               </div>
             </div>
