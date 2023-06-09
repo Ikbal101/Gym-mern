@@ -8,7 +8,7 @@ const useClasses = () => {
 
     useEffect(() => {
       // Fetch class data from classes.json
-      fetch("classes.json")
+      fetch("http://localhost:5000/classes")
         .then((response) => response.json())
         .then((data) => {
             setClassData(data);

@@ -1,5 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import useClasses from "../../hooks/UseClasses";
+import { AwesomeButton } from "react-awesome-button";
+import 'react-awesome-button/dist/styles.css';
+
 
 const Classes = () => {
     const [classData] = useClasses();
@@ -42,12 +45,12 @@ const Classes = () => {
                     className="w-12 h-12 rounded rounded-full"
                   />
                 </td>
-                <td>{classItem.title}</td>
-                <td>{classItem.instructorName}</td>
+                <td className="font-bold">{classItem.title}</td>
+                <td className="font-bold">{classItem.instructorName}</td>
                 <td>{classItem.availableSeats}</td>
                 <td>${classItem.price}</td>
                 <td>
-                  <button className="btn btn-ghost btn-xs">Select</button>
+                <AwesomeButton  type="secondary">Select</AwesomeButton>
                 </td>
               </tr>
             ))}

@@ -1,21 +1,9 @@
-import { useEffect, useState } from "react";
 import { Helmet } from 'react-helmet-async';
+import useInstructors from "../../hooks/useInstructors";
 
 
 const Instructors = () => {
-  const [instructors, setInstructors] = useState([]);
-
-  useEffect(() => {
-    fetch('instructors.json')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setInstructors(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching instructors:", error);
-      });
-  }, []);
+const [instructors] = useInstructors()
 
   return (
       <div className="mb-24">

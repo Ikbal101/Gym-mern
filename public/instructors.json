@@ -1,122 +1,113 @@
 [
-    {
-        "title": "Cardio Kickboxing",
-        "name": "John Doe",
-        "email":"jhonDoe@gmail.com",
-        "image": "https://img.freepik.com/free-photo/determined-professional-boxer_1098-14119.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
-        "numberOfClassesTaken": 2,
-        "students": 50,
-        "classesTaken": ["cardio Kickboxing","Boot Camp"]
-        
-      },
-  
-     
-    {
-        "title": "HIIT (High-Intensity Interval Training)",
-        "name": "Jane Smith",
-        "email":"janesmith@gmail.com",
-        "image": "https://img.freepik.com/free-photo/man-exercising-leg-press-machine_329181-14136.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
-        "numberOfClassesTaken": 2,
-        "students": 65,
-        "classesTaken": ["HIIT (High-Intensity Interval Training)","Piloxing"]
-      
-    },
-    {
-        "title": "Zumba",
-        "name": "Sarah Johnson",
-        "email":"sarahjohnson@gmail.com",
-        "image": "https://img.freepik.com/free-photo/female-model-practicing-some-zumba_23-2149047622.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
-        "numberOfClassesTaken": 1,
-        "availableSeats":6,
-        "classesTaken": ["Zumba"]
-      
-    },
-    {
-        "title": "Yoga",
-        "name": "Michael Anderson",
-        "email":"michaelanderson@gmail.com",
-        "image": "https://img.freepik.com/free-photo/young-beautiful-woman-doing-yoga-exercise-green-park-healthy-lifestyle-fitness-concept_155003-24082.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=sph",
-        "numberOfClassesTaken": 3,
-        "students": 45,
-        "classesTaken": ["Yoga","Aerial Yoga","Piloxing"]
-      
-    },
-      {
-         "title": "Spinning/Cycling",
-          "name": "Robert Wilson",
-          "email":"robertwilson@gmail.com",
-          "image": "https://img.freepik.com/free-photo/professional-his-biggest-passion_329181-8694.jpg?w=996&t=st=1686194854~exp=1686195454~hmac=670e0144ceca2672f26757c76c048ca4d227b92734cf5d6c5c8086b4a1a25003",
-          "numberOfClassesTaken": 2,
-          "students": 70,
-          "classesTaken": ["Spinning/Cycling","Aqua Fitness" ]
-        
-      },
-  
-      {
-        "title": "Boot Camp",
-          "name": "Emily Thompson",
-          "email":"emilythompson@gmail.com",
-          "image": "https://img.freepik.com/free-photo/close-up-park-ranger-woods_23-2149309550.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
-          "numberOfClassesTaken": 1,
-          "students": 55,
-          "classesTaken": ["Boot Camp"]
-    
-      },
-      {
-         "title": "Aerial Yoga",
-          "name": "Natalie Davis",
-          "email":"nataliedavis@gmail.com",
-          "image": "https://img.freepik.com/free-photo/woman-aerial-silks-class_23-2147778531.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
-          "numberOfClassesTaken": 2,
-          "students": 25,
-          "classesTaken": ["Aerial Yoga","Yoga"]
-        
-      },
-      {
-        "title": "Piloxing",
-        
-          "name": "Mark Thompson",
-          "email":"markthompson@gmail.com",
-          "image": "https://img.freepik.com/free-photo/handsome-man-training-summer-park_1157-25625.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
-          "numberOfClassesTaken": 1,
-          "students": 20,
-          "classesTaken": ["Piloxing"]
-        
-      },
-      {
-        "title": "Aqua Fitness",
-      
-          "name": "Jessica Garcia",
-          "email":"jessicagarcia@gmail.com",
-          "image": "https://img.freepik.com/free-photo/women-swimming-swimming-pool_1098-21381.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
-        "numberOfClassesTaken": 2,
-        "students": 30,
-        "classesTaken": ["Aqua Fitness","Spinning/Cycling"]
-        
-      },
-      {
-        "title": "Circuit Training",
-       
-          "name": "Ryan Wilson",
-          "email":"ryanwilson@gmail.com",
-          "image": "https://img.freepik.com/free-photo/sportsman-doing-push-ups-exercises-working-out-front-stadium_8353-6407.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
-          "numberOfClassesTaken": 1,
-          "students": 40,
-        "classesTaken": ["Circuit Training" ]
-        
-      },
-     
-     
-      {
-        "title": "Bodyweight Training",
-        
-          "name": "Daniel Lee",
-          "email":"daniellee@gmail.com",
-          "image": "https://img.freepik.com/free-photo/young-muscular-athlete-training-gym-doing-strength-exercises-practicing_155003-35979.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
-          "numberOfClassesTaken": 2,
-          "students": 30,
-          "classesTaken": ["Bodyweight Training","cardio Kickboxing"]
-        
-      }
-    ]
-    
+  {
+    "id": "4F8D2E",
+    "title": "Cardio Kickboxing",
+    "name": "John Doe",
+    "email": "jhonDoe@gmail.com",
+    "image": "https://img.freepik.com/free-photo/determined-professional-boxer_1098-14119.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 2,
+    "students": 50,
+    "classesTaken": ["cardio Kickboxing", "Boot Camp"]
+  },
+  {
+    "id": "7A2H9C",
+    "title": "HIIT (High-Intensity Interval Training)",
+    "name": "Jane Smith",
+    "email": "janesmith@gmail.com",
+    "image": "https://img.freepik.com/free-photo/man-exercising-leg-press-machine_329181-14136.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 2,
+    "students": 65,
+    "classesTaken": ["HIIT (High-Intensity Interval Training)", "Piloxing"]
+  },
+  {
+    "id": "3K7F5P",
+    "title": "Zumba",
+    "name": "Sarah Johnson",
+    "email": "sarahjohnson@gmail.com",
+    "image": "https://img.freepik.com/free-photo/female-model-practicing-some-zumba_23-2149047622.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 1,
+    "availableSeats": 6,
+    "students": 80,
+    "classesTaken": ["Zumba"]
+  },
+  {
+    "id": "9R5P2B",
+    "title": "Yoga",
+    "name": "Michael Anderson",
+    "email": "michaelanderson@gmail.com",
+    "image": "https://img.freepik.com/free-photo/young-beautiful-woman-doing-yoga-exercise-green-park-healthy-lifestyle-fitness-concept_155003-24082.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=sph",
+    "numberOfClassesTaken": 3,
+    "students": 45,
+    "classesTaken": ["Yoga", "Aerial Yoga", "Piloxing"]
+  },
+  {
+    "id": "2N6L7A",
+    "title": "Spinning/Cycling",
+    "name": "Robert Wilson",
+    "email": "robertwilson@gmail.com",
+    "image": "https://img.freepik.com/free-photo/professional-his-biggest-passion_329181-8694.jpg?w=996&t=st=1686194854~exp=1686195454~hmac=670e0144ceca2672f26757c76c048ca4d227b92734cf5d6c5c8086b4a1a25003",
+    "numberOfClassesTaken": 2,
+    "students": 70,
+    "classesTaken": ["Spinning/Cycling", "Aqua Fitness"]
+  },
+  {
+    "id": "8C4G3X",
+    "title": "Boot Camp",
+    "name": "Emily Thompson",
+    "email": "emilythompson@gmail.com",
+    "image": "https://img.freepik.com/free-photo/close-up-park-ranger-woods_23-2149309550.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 1,
+    "students": 55,
+    "classesTaken": ["Boot Camp"]
+  },
+  {
+    "id": "5J9M8D",
+    "title": "Aerial Yoga",
+    "name": "Natalie Davis",
+    "email": "nataliedavis@gmail.com",
+    "image": "https://img.freepik.com/free-photo/woman-aerial-silks-class_23-2147778531.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 2,
+    "students": 25,
+    "classesTaken": ["Aerial Yoga", "Yoga"]
+  },
+  {
+    "id": "1B5D7R",
+    "title": "Piloxing",
+    "name": "Mark Thompson",
+    "email": "markthompson@gmail.com",
+    "image": "https://img.freepik.com/free-photo/handsome-man-training-summer-park_1157-25625.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 1,
+    "students": 20,
+    "classesTaken": ["Piloxing"]
+  },
+  {
+    "id": "6S2E9K",
+    "title": "Aqua Fitness",
+    "name": "Jessica Garcia",
+    "email": "jessicagarcia@gmail.com",
+    "image": "https://img.freepik.com/free-photo/women-swimming-swimming-pool_1098-21381.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.1.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 2,
+    "students": 30,
+    "classesTaken": ["Aqua Fitness", "Spinning/Cycling"]
+  },
+  {
+    "id": "3T6H4R",
+    "title": "Circuit Training",
+    "name": "Ryan Wilson",
+    "email": "ryanwilson@gmail.com",
+    "image": "https://img.freepik.com/free-photo/sportsman-doing-push-ups-exercises-working-out-front-stadium_8353-6407.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 1,
+    "students": 40,
+    "classesTaken": ["Circuit Training"]
+  },
+  {
+    "id": "9F2G3L",
+    "title": "Bodyweight Training",
+    "name": "Daniel Lee",
+    "email": "daniellee@gmail.com",
+    "image": "https://img.freepik.com/free-photo/young-muscular-athlete-training-gym-doing-strength-exercises-practicing_155003-35979.jpg?size=626&ext=jpg&uid=R91300056&ga=GA1.2.350930333.1680253427&semt=ais",
+    "numberOfClassesTaken": 2,
+    "students": 30,
+    "classesTaken": ["Bodyweight Training", "cardio Kickboxing"]
+  }
+]
