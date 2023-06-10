@@ -1,19 +1,22 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/Authproviders";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const [passwordError, setPasswordError] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
     watch
   } = useForm();
 
-  const {createUser} = useContext(AuthContext);
+  const {createUser,updateUserProfile} = useContext(AuthContext);
+  const navigate = useNavigate();
   
   const onSubmit = data => {
     if (data.password !== data.confirmPassword) {
@@ -27,6 +30,22 @@ const SignUp = () => {
 
         const loggedUser = result.user;
         console.log(loggedUser);
+
+        updateUserProfile(data.name, data.photoURL)
+        .then( () =>{
+            console.log('photoUrl is updated');
+            reset();
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'User created successfully.',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            navigate('/');
+        })
+        .catch(error => console.log(error))
+
     })
   };
 
@@ -150,11 +169,7 @@ const SignUp = () => {
             <div className="form-control mt-6">
               <input className="btn btn-primary" type="submit" value="Sign Up" />
             </div>
-          </form>
-          {passwordError && (
-            <p className="text-red-600">Passwords do not match</p>
-          )}
-          <p className="text-center">
+            <p className="text-center">
             <small>
               Already have an account!{" "}
               <Link to="/login">
@@ -162,6 +177,10 @@ const SignUp = () => {
               </Link>
             </small>
           </p>
+          </form>
+          {passwordError && (
+            <p className="text-red-600">Passwords do not match</p>
+          )}
         </div>
       </div>
     </div>

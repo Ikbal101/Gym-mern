@@ -1,0 +1,19 @@
+.slider {
+  /* Set the maximum width of the slider */
+  max-width: 100%;
+
+  /* Center the slider horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Add additional styles as needed */
+}
+
+/* Media query for small devices */
+@media (max-width: 576px) {
+  .slider {
+    /* Adjust the width and height of the slider for small devices */
+    width: 100%;
+    height: 200px;
+  }
+}
