@@ -3,11 +3,13 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/Authproviders";
 import { useLocation, useNavigate } from "react-router-dom";
 import './Class.css'
+import useCart from "../../hooks/useCart";
 
 const ClassesTable = ({ classItem }) => {
   const { user } = useContext(AuthContext);
   const { title, image, instructorName, availableSeats, price,_id } = classItem; 
   const navigate = useNavigate();
+  const[,refetch] = useCart()
   const location = useLocation();
 
   const handleAddToCart = (classItem) => {
@@ -24,6 +26,7 @@ const ClassesTable = ({ classItem }) => {
         .then(res => res.json())
         .then(data => {
           if (data.insertedId) {
+            refetch();
             Swal.fire({
               position: 'center',
               icon: 'success',

@@ -1,11 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/Authproviders";
 import {FaShoppingCart} from "react-icons/fa"
+import useCart from "../../../hooks/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const[cart]= useCart();
 
   const handleLogout = () => {
     logOut()
@@ -17,7 +19,6 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  useEffect( (),[])
 
   const navLists = (
     <>
@@ -34,7 +35,7 @@ const Navbar = () => {
         <Link className="md:-mt-3" to="/">
           <button className="btn gap-2 ">
           <FaShoppingCart></FaShoppingCart>
-            <div className="badge badge-warning">+0</div>
+            <div className="badge badge-warning">{cart?.length || 0}</div>
           </button>
         </Link>
       </li>
