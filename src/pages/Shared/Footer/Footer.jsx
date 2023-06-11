@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div>
+        <div id="contact">
             <footer className="footer p-10 bg-slate-800 text-neutral-content">
   <div>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFiQ9ZIUtUfLebFBsI9dh2cNEMBInaurjjJg&usqp=CAU" style={{"borderRadius":"10px","height":"65px"}} alt="" />

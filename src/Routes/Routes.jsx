@@ -7,6 +7,8 @@ import Instractors from "../pages/Instractors/Instractors";
 import Classes from "../pages/Classes/Classes";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import Dashboard from "../Layout/Dashboard";
+import MySelectedClass from "../pages/Dashoard/MyCart/MySelectedClass";
 
   export const router = createBrowserRouter([
     {
@@ -35,4 +37,14 @@ import SignUp from "../pages/SignUp/SignUp";
         },
       ]
     },
+    {
+      path:'dashboard',
+      element:<Dashboard></Dashboard>,
+      children:[
+        {
+          path:'mycart',
+          element:<MySelectedClass></MySelectedClass>
+        },
+      ]
+    }
   ]);
