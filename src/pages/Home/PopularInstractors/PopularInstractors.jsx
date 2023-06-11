@@ -7,7 +7,7 @@ const PopularInstructors = () => {
 
   useEffect(() => {
     // Fetch the instructors.json file
-    fetch("instructors.json")
+    fetch("http://localhost:5000/instructors")
       .then((response) => response.json())
       .then((data) => {
         // Sort the instructors by students in descending order
