@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/Authproviders";
 import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+// import './Signup.css'
 
 const SignUp = () => {
   const [passwordError, setPasswordError] = useState(false);
@@ -33,16 +35,29 @@ const SignUp = () => {
 
         updateUserProfile(data.name, data.photoURL)
         .then( () =>{
-            console.log('photoUrl is updated');
-            reset();
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'User created successfully.',
-                showConfirmButton: false,
-                timer: 1500
-            });
-            navigate('/');
+          const saveUser = {name : data.name, email : data.email}
+          fetch('http://localhost:5000/users',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(saveUser)
+        })
+          .then(res => res.json())
+          .then(data => {
+            if(data.insertedId){
+              reset();
+              Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'User created successfully.',
+                  showConfirmButton: false,
+                  timer: 1500
+              });
+              navigate('/');
+            }
+          })
+          
         })
         .catch(error => console.log(error))
 
@@ -50,11 +65,11 @@ const SignUp = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen mb-10 bg-base-200">
         <Helmet>
             <title>Fitcraft | signUp</title>
         </Helmet>
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col lg:flex-row-reverse -mt-72">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Sign up now!</h1>
           <p className="py-6">
@@ -168,8 +183,9 @@ const SignUp = () => {
             </div>
             <div className="form-control mt-6">
               <input className="btn btn-primary" type="submit" value="Sign Up" />
+          <SocialLogin></SocialLogin> 
             </div>
-            <p className="text-center">
+            <p className="text-center m-4">
             <small>
               Already have an account!{" "}
               <Link to="/login">

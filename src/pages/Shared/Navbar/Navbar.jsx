@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/Authproviders";
-import {FaShoppingCart} from "react-icons/fa"
+import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const[cart]= useCart();
+  const [cart] = useCart();
 
   const handleLogout = () => {
     logOut()
@@ -18,6 +18,7 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
 
 
   const navLists = (
@@ -34,13 +35,14 @@ const Navbar = () => {
       <li>
         <Link className="md:-mt-3" to="/dashboard/mycart">
           <button className="btn gap-2 ">
-          <FaShoppingCart></FaShoppingCart>
+            <FaShoppingCart></FaShoppingCart>
             <div className="badge badge-warning">{cart?.length || 0}</div>
           </button>
         </Link>
       </li>
     </>
   );
+  console.log(user);
 
   return (
     <>
@@ -93,7 +95,7 @@ const Navbar = () => {
             <>
               {/* User profile image */}
               <img
-                src={user.photoURL}
+                src={user?.photoURL}
                 alt="Profile"
                 className="h-8 w-8 rounded-full lg:hidden mr-2"
               />
@@ -118,6 +120,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-

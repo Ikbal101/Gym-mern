@@ -3,6 +3,7 @@ import { AuthContext } from "../../Providers/Authproviders";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -131,6 +132,7 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <input className="btn btn-primary" type="submit" value="Login" />
+            <SocialLogin></SocialLogin>
               </div>
               <p className="text-center">
                 <small>
