@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { FaHome, FaUsers, FaBookReader, FaShoppingCart, FaWallet, FaCashRegister, FaPhone, FaBook } from 'react-icons/fa';
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
 
 const AdminDashboard = () => {
   return (
@@ -41,7 +42,7 @@ const InstructorDashboard = () => {
 
 const Dashboard = () => {
     const[isAdmin] = useAdmin();
-  const isInstructor = true;
+    const[isInstructor] =useInstructor();
 
   return (
     <div className="drawer lg:drawer-open">
