@@ -12,6 +12,11 @@ import MySelectedClass from "../pages/Dashoard/MyCart/MySelectedClass";
 import PrivateRoute from "./PrivateRoute";
 import AllUser from "../pages/Dashoard/AllUser/AllUser";
 import AddClasses from "../pages/Dashoard/AddClasses/AddClasses";
+import InstructorRoute from "./InstructorRoute";
+import ManageClasses from "../pages/Dashoard/ManageClasses/ManageClasses";
+import AdminRoute from "./AdminRoute";
+import Payment from "../pages/Dashoard/Payment/Payment";
+import MyEnrollClass from "../pages/Dashoard/MyEnrollCLass/MyEnrollClass";
 
   export const router = createBrowserRouter([
     {
@@ -49,12 +54,24 @@ import AddClasses from "../pages/Dashoard/AddClasses/AddClasses";
           element:<MySelectedClass></MySelectedClass>
         },
         {
+          path:'enroll',
+          element:<MyEnrollClass></MyEnrollClass>
+        },
+        {
+          path:'payment',
+          element:<Payment></Payment>
+        },
+        {
           path:'manageusers',
-          element:<AllUser></AllUser>
+          element:<AdminRoute><AllUser></AllUser></AdminRoute>
+        },
+        {
+          path:'manageclasses',
+          element:<ManageClasses></ManageClasses>
         },
         {
           path:'addClass',
-          element:<AddClasses></AddClasses>
+          element:<InstructorRoute><AddClasses></AddClasses></InstructorRoute>
         },
       ]
     }

@@ -7,7 +7,6 @@ import useInstructor from "../hooks/useInstructor";
 const AdminDashboard = () => {
   return (
     <>
-      <li><NavLink to="/dashboard/home"><FaHome />Admin Home</NavLink></li>
       <li><NavLink to="/dashboard/manageclasses"><FaBook />Manage Classes</NavLink></li>
       <li><NavLink to="/dashboard/manageusers"><FaUsers />Manage Users</NavLink></li>
     </>
@@ -19,7 +18,6 @@ const UserDashboard = () => {
  
   return (
     <>
-      <li><NavLink to="/dashboard/home"><FaHome />User Home</NavLink></li>
       <li><NavLink to="/dashboard/enroll"><FaCashRegister />My Enroll Class</NavLink></li>
       <li><NavLink to="/dashboard/history"><FaWallet />Payment History</NavLink></li>
       <li>
