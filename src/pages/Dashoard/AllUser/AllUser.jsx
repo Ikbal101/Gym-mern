@@ -22,7 +22,7 @@ const AllUser = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/users/${item._id}`, {
+        fetch(`https://fitcraft-academy-server.vercel.app/users/${item._id}`, {
           method: 'DELETE'
         })
           .then((res) => res.json())
@@ -50,7 +50,7 @@ const AllUser = () => {
   
 
   const handleMakeAdmin = user => {
-    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+    fetch(`https://fitcraft-academy-server.vercel.app/users/admin/${user._id}`, {
         method: 'PATCH'
     })
     .then(res => res.json())
@@ -71,7 +71,7 @@ const AllUser = () => {
 };
 
 const handleMakeInstructor = (user) => {
-    fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+    fetch(`https://fitcraft-academy-server.vercel.app/users/instructor/${user._id}`, {
       method: 'PATCH'
     })
     .then(res => res.json())

@@ -1,0 +1,26 @@
+/* CSS for PaymentHistory component */
+.payment-history {
+    margin-top: 20px;
+  }
+  
+  .payment-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .payment-history th,
+  .payment-history td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .payment-history th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .payment-history tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

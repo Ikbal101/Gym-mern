@@ -7,7 +7,7 @@ const useInstructors = () => {
     const [loading,setLoading] = useState(true);
 
     useEffect(() => {
-      fetch('http://localhost:5000/instructors')
+      fetch('https://fitcraft-academy-server.vercel.app/instructors')
         .then((response) => response.json())
         .then((data) => {
           console.log(data);

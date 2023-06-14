@@ -7,7 +7,7 @@ const useClasses = () => {
 
   useEffect(() => {
     // Fetch class data from classes.json
-    fetch("http://localhost:5000/classes")
+    fetch("https://fitcraft-academy-server.vercel.app/classes")
       .then((response) => response.json())
       .then((data) => {
         setClassData(data);

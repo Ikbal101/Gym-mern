@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/Authproviders";
-import { FaShoppingCart } from "react-icons/fa";
+// import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 
 const Navbar = () => {
@@ -19,8 +19,6 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-
-
   const navLists = (
     <>
       <li>
@@ -33,16 +31,15 @@ const Navbar = () => {
         <Link to="/classes">Classes</Link>
       </li>
       <li>
-        <Link className="md:-mt-3" to="/dashboard/mycart">
+        <Link className="md:-mt-3" to="/dashboard">
           <button className="btn gap-2 ">
-            <FaShoppingCart></FaShoppingCart>
+            Dashboard
             <div className="badge badge-warning">{cart?.length || 0}</div>
           </button>
         </Link>
       </li>
     </>
   );
-  console.log(user);
 
   return (
     <>
@@ -81,7 +78,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo */}
-          <p className="btn btn-ghost normal-case text-xl text-amber-200">
+          <p className="btn btn-ghost normal-case text-xl text-violet-200">
             Fitcraft
           </p>
         </div>
@@ -94,11 +91,13 @@ const Navbar = () => {
           {user ? (
             <>
               {/* User profile image */}
-              <img
-                src={user?.photoURL}
-                alt="Profile"
-                className="h-8 w-8 rounded-full lg:hidden mr-2"
-              />
+              {user.photoURL && (
+                <img
+                  src={user.photoURL}
+                  alt="Profile"
+                  className="h-8 w-8 rounded-full  mr-2"
+                />
+              )}
 
               {/* Logout button */}
               <button onClick={handleLogout} className="btn btn-ghost">
@@ -110,6 +109,11 @@ const Navbar = () => {
               {/* Login link */}
               <Link to="/login" className="btn btn-ghost">
                 Login
+              </Link>
+
+              {/* Sign up link */}
+              <Link to="/signup" className="btn btn-primary ml-2">
+                Sign Up
               </Link>
             </>
           )}

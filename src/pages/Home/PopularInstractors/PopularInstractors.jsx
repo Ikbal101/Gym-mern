@@ -7,7 +7,7 @@ const PopularInstructors = () => {
 
   useEffect(() => {
     // Fetch the instructors.json file
-    fetch("http://localhost:5000/instructors")
+    fetch("https://fitcraft-academy-server.vercel.app/instructors")
       .then((response) => response.json())
       .then((data) => {
         // Sort the instructors by students in descending order

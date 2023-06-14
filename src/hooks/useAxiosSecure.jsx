@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Providers/Authproviders';
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000', 
+    baseURL: 'https://fitcraft-academy-server.vercel.app', 
   });
 
 const useAxiosSecure = () => {

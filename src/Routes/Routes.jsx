@@ -17,11 +17,15 @@ import ManageClasses from "../pages/Dashoard/ManageClasses/ManageClasses";
 import AdminRoute from "./AdminRoute";
 import Payment from "../pages/Dashoard/Payment/Payment";
 import MyEnrollClass from "../pages/Dashoard/MyEnrollCLass/MyEnrollClass";
+import PaymentHistory from "../pages/PaymentHistory/PaymentHistory";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import MyCLass from "../pages/Dashoard/MyClass/MyCLass";
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<NotFoundPage></NotFoundPage>,
       children:[
         {
             path: "/",
@@ -62,6 +66,10 @@ import MyEnrollClass from "../pages/Dashoard/MyEnrollCLass/MyEnrollClass";
           element:<Payment></Payment>
         },
         {
+          path:'history',
+          element:<PaymentHistory></PaymentHistory>
+        },
+        {
           path:'manageusers',
           element:<AdminRoute><AllUser></AllUser></AdminRoute>
         },
@@ -72,6 +80,10 @@ import MyEnrollClass from "../pages/Dashoard/MyEnrollCLass/MyEnrollClass";
         {
           path:'addClass',
           element:<InstructorRoute><AddClasses></AddClasses></InstructorRoute>
+        },
+        {
+          path:'myClass',
+          element:<InstructorRoute><MyCLass></MyCLass></InstructorRoute>
         },
       ]
     }
