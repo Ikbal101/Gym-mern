@@ -10,7 +10,7 @@ const MyClasses = () => {
 
   useEffect(() => {
     axiosSecure
-      .get("/class")
+      .get("/carts")
       .then((response) => {
         const instructorClasses = response.data.filter(
           (classItem) => classItem.instructorEmail === user?.email

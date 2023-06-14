@@ -4,43 +4,44 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import './manage.css'
 import Swal from "sweetalert2";
 import { FaTrashAlt } from "react-icons/fa";
+import useCart from "../../../hooks/useCart";
 
 const ManageClasses = () => {
   const { user } = useContext(AuthContext);
   const [classes, setClasses] = useState([]);
   const [axiosSecure] = useAxiosSecure();
+  const [, refetch] = useCart();
 
-  const handleDelete = item => {
+  const handleDelete = (classId) => {
     Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
-        if (result.isConfirmed) {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/carts/${classId}`)
+          .then(res => {
+            console.log('deleted res', res.data);
+            if (res.data.deletedCount > 0) {
+              refetch();
+              Swal.fire(
+                'Deleted!',
+                'Your class has been deleted.',
+                'success'
+              );
+            }
+          });
+      }
+    });
+  };
 
-            axiosSecure.delete(`/class/${item._id}`)
-                .then(res => {
-                    console.log('deleted res', res.data);
-                    if (res.data.deletedCount > 0) {
-                        refetch();
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        )
-                    }
-                })
-
-        }
-    })
-}
   useEffect(() => {
     if (user) {
-      axiosSecure.get("/class").then((response) => {
+      axiosSecure.get("/carts").then((response) => {
         setClasses(response.data);
       });
     }
@@ -57,7 +58,7 @@ const ManageClasses = () => {
     setClasses(updatedClasses);
 
     // Make an API request to update the status in the backend
-    axiosSecure.put(`/class/${classId}`, { status: "approved" })
+    axiosSecure.put(`/carts/${classId}`, { status: "approved" })
       .then((response) => {
         // Success! Handle any further actions or notifications if needed
       })
@@ -77,7 +78,7 @@ const ManageClasses = () => {
     setClasses(updatedClasses);
 
     // Make an API request to update the status in the backend
-    axiosSecure.put(`/class/${classId}`, { status: "denied" })
+    axiosSecure.put(`/carts/${classId}`, { status: "denied" })
       .then((response) => {
         // Success! Handle any further actions or notifications if needed
       })
@@ -97,7 +98,7 @@ const ManageClasses = () => {
     setClasses(updatedClasses);
 
     // Make an API request to update the status in the backend
-    axiosSecure.put(`/class/${classId}`, { status: "pending" })
+    axiosSecure.put(`/carts/${classId}`, { status: "pending" })
       .then((response) => {
         // Success! Handle any further actions or notifications if needed
       })
@@ -107,53 +108,48 @@ const ManageClasses = () => {
   };
 
   return (
-    <div className="table-container">
-      <h2>Manage Classes</h2>
-      {classes.length > 0 ? (
-        <table>
-          <thead>
-            <tr>
-              <th>Class Image</th>
-              <th>Class Name</th>
-              <th>Instructor Name</th>
-              <th>Instructor Email</th>
-              <th>Available Seats</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {classes.map((classItem) => (
-              <tr key={classItem.id}>
-                <td>
-                  <img src={classItem.image} alt={classItem.title} />
-                </td>
-                <td>{classItem.title}</td>
-                <td>{classItem.instructorName}</td>
-                <td>{classItem.instructorEmail}</td>
-                <td>{classItem.availableSeats}</td>
-                <td>{classItem.price}</td>
-                <td>{classItem.status}</td>
-                <td className="actions">
-                  {classItem.status === "pending" && (
-                    <div>
-<button onClick={() => handleApprove(classItem.id)}>Approve</button>
-<button onClick={() => handleDeny(classItem.id)}>Deny</button>
-                      <button onClick={() => handleFeedback(classItem.id)}>Send Feedback</button>
-                    </div>
-                  )}
-                </td>
-                <td>
-                                    <button onClick={() => handleDelete(classItem)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
-                                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        <p>No classes added by the instructor.</p>
-      )}
+    <div>
+      <h1>Manage Classes</h1>
+      <div className="class-list">
+        {classes.map((classItem) => (
+          <div key={classItem._id} className="class-item">
+            <div className="class-info">
+              <h2>{classItem.name}</h2>
+              <p>{classItem.description}</p>
+              <p>Status: {classItem.status}</p>
+            </div>
+            <div className="class-actions">
+              <button
+                className="approve-button"
+                onClick={() => handleApprove(classItem._id)}
+                disabled={classItem.status === "approved"}
+              >
+                Approve
+              </button>
+              <button
+                className="deny-button"
+                onClick={() => handleDeny(classItem._id)}
+                disabled={classItem.status === "denied"}
+              >
+                Deny
+              </button>
+              <button
+                className="pending-button"
+                onClick={() => handlePending(classItem._id)}
+                disabled={classItem.status === "pending"}
+              >
+                Pending
+              </button>
+              <button
+                className="delete-button"
+                onClick={() => handleDelete(classItem._id)}
+              >
+                <FaTrashAlt />
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
