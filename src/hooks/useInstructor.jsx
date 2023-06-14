@@ -8,6 +8,9 @@ const useInstructor = () => {
     const {data: isInstructor, isLoading: isInstructorLoading} = useQuery({
         queryKey: ['isInstructor', user?.email],
         queryFn: async () => {
+            if(!user){
+                return false;
+            }
             const res = await axiosSecure.get(`/users/instructor/${user?.email}`);
             console.log('is admin response', res)
             return res.data.admin;
