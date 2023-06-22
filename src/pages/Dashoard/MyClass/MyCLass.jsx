@@ -24,7 +24,7 @@ const MyClasses = () => {
 
   return (
     <div>
-      <h2>This is My Classes</h2>
+      <h2> My Classes</h2>
       <table className="class-table">
         <thead>
           <tr>
